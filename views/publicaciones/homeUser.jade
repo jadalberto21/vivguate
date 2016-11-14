@@ -1,0 +1,23 @@
+extends ../layout
+block content
+  div(class="row")
+    div(class="")
+      h2 Productos
+      article
+      - if (productos)
+        - each producto in productos
+          div(class="col-md-4 fondo-azul inline-block content_img" style="background-image: url(#{producto.Fotografias});  background-size: 50px 50px; background-size: 100% 100%; ")
+            header
+              a(href="/producto/" + producto._id.toString()) #{producto.nombrePub}
+            ul
+              li Descripcion de Inmueble: #{producto.descripcionPub}
+              li Departamento: #{producto.departamentoPub}
+              li Municipio: #{producto.municipioPub}
+              li Direccion Exacta: #{producto.direccionPub}
+              li Precio Inmueble: #{producto.precio}
+              li Contexto de Precio: #{producto.contextoPrecio}
+              li Forma de Pago:: #{producto.financiamientoPub}
+              li Disponbilidad Para: #{producto.alquilerCompra}
+              footer Fecha de Publicacion: #{producto.fechaPub}
+              a(href="publicaciones/editarProducto/#{producto._id.toString()}") Editar Producto
+               a(href="publicaciones/#{producto._id.toString()}/eliminar") Eliminar Producto

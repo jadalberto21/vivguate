@@ -1,0 +1,305 @@
+body{
+	/* background-image: url(http://www.anawalls.com/images/city/new-york-skyscrapers-buildings-city.jpg);*/
+	background-image: url(http://www.publicdomainpictures.net/pictures/130000/velka/aqua-blue-gradient-background.jpg);
+	max-width: 100%;
+}
+
+.espacio-izquierda{
+	margin-left: 6px;
+}
+
+a{
+	color: #191970;
+}
+
+.inputs{
+	border-radius: .5em;
+}
+
+.t{
+
+	float: none;
+}
+
+.content_img{
+	color: #FFFFFF;
+	height: 300px;
+	width: 150px;
+
+}
+
+.espacio-arriba{
+	margin-top: 100px;
+}
+
+.titulos{
+	font-family: Cooper Black, Broadway;
+}
+
+.subtitulos{
+	font-family: Axure Handwriting, Broadway;
+}
+
+.separar{
+	margin-top: 10px;
+	
+	}
+.inline-block{
+	float: none;
+	display: inline-block;
+	margin-right: -4px;
+}
+.color-azul{
+	background-color: #cee3f6;
+}
+.padding-largo{
+	padding: 5px 10px;
+
+}
+
+.quitar-lista{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.quitar-lista li{
+	 list-style-type: none;
+}
+.large-padding{
+	padding: 5px 10px;
+}
+.fondo-azul{
+	background-color: #BDBDBD;
+}
+.no-list{
+	margin: 0px;
+	padding: 0px;
+}
+.no-list li{
+	list-style-type: none;
+}
+.tamano-mediano{
+	font-size: 1.3em;
+}
+
+.lato{
+	font-family: 'Lato', sans-serif;	
+}
+.tamano-small{
+	font-size: 12px;
+}
+.fondo-somos{
+	background-image: url(http://www.fondox.net/wallpapers/atardecer-en-una-ciudad-2631.jpg);
+	height: 580px;
+	background-size: 100%;
+	display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+
+}
+.letra-blanca{
+	color: #E0F8F1;
+}
+.large-padding{
+	padding: 5px 10px;
+}
+.fondo-nav{
+	background-color: #2E2E2E;
+}
+.ir-derecha{
+	text-align: right;
+	position: absolute;
+}
+
+
+/*------------estilos para publicacion----------------*/
+
+ .clear{width:100%;clear:both;}
+ /*Estilos Base*/ 
+.contenedor-img {
+    width: 300px;
+    height: 200px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+    background: #fff;
+}
+    .contenedor-img .mascara,.contenedor-img .contenido {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        overflow: hidden;
+        top: 0;
+        left: 0
+    }
+    .contenedor-img img {
+        display: block;
+        position: relative;
+       
+    }
+    .contenedor-img h2 {
+        text-transform: uppercase;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        font-size: 17px;
+        padding: 10px;
+        background: rgba(0, 0, 0, 0.9);
+        margin: 20px 0 0 0
+    }
+    .contenedor-img p {    
+        font-size: 12px;
+        position: relative;
+        color: #fff;
+        padding: 10px 20px 10px;
+        text-align: center
+    }
+    .contenedor-img a.link {
+        display: inline-block;
+        text-decoration: none;
+        padding: 7px 14px;
+        background: #222;
+        color: #fff;
+        text-transform: uppercase;
+        box-shadow: 0 0 1px #000
+    }
+        .contenedor-img a.link:hover {
+            box-shadow: 0 0 5px #000
+        }
+/*Ejemplo 3*/
+.ejemplo-3 img {
+	transition: all 0.4s ease-in-out; 
+}
+.ejemplo-3 .mascara { 
+	background-color: rgba(128,96,0,0.5);
+	transform: translateX(-300px);
+	opacity: 1;
+	transition: all 0.4s ease-in-out; 
+}
+.ejemplo-3 h2{
+    background: rgba(255, 255, 255, 0.3);
+    color: #000;
+    box-shadow: 0px 1px 3px rgba(159, 141, 140, 0.5);
+}
+.ejemplo-3 p{
+    color: #333;   
+}
+.ejemplo-3:hover .mascara { 
+	transform: translateX(0px);
+}						
+.ejemplo-3:hover img { 
+	transform: translateX(300px);	
+}
+
+
+/* Estilos de mapas */
+      html, body {
+        height: 700px;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 600px;
+        width: 400px
+      }
+.controls {
+  margin-top: 10px;
+  border: 1px solid transparent;
+  border-radius: 2px 0 0 2px;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  height: 32px;
+  outline: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#pac-input {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;
+  margin-left: 12px;
+  padding: 0 11px 0 13px;
+  text-overflow: ellipsis;
+  width: 300px;
+}
+
+#pac-input:focus {
+  border-color: #4d90fe;
+}
+
+.pac-container {
+  font-family: Roboto;
+}
+
+#type-selector {
+  color: #fff;
+  background-color: #4d90fe;
+  padding: 5px 11px 0px 11px;
+}
+
+#type-selector label {
+  font-family: Roboto;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+/* ----- Estilos de menu --------*/
+
+      
+      #header {
+        width:100%;
+        font-family:Arial, Helvetica, sans-serif;
+      }
+      
+      ul, ol {
+        list-style:none;
+      }
+      
+      .nav > li {
+		 display: block;
+		 display: inline-block;
+     	 width: 375px;
+   	    
+    	float: left;
+     	margin-left: 3px;  
+
+	}
+      
+      .nav li a {
+        background-color:#0B0B61;
+        color:#fff;
+        text-decoration:none;
+        padding:10px 12px;
+        display:block;
+      }
+      
+      .nav li a:hover {
+        background-color:#B40404;
+      }
+      
+      .nav li ul {
+        display:none;
+        position:absolute;
+        min-width:140px;
+      }
+      
+      .nav li:hover > ul {
+        display:block;
+      }
+      
+      .nav li ul li {
+        position:relative;
+      }
+      
+      .nav li ul li ul {
+        right:-140px;
+        top:0px;
+      }
+
+
+

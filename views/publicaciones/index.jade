@@ -1,0 +1,88 @@
+extends ../layout
+block content
+  form(method="POST" action="/publicaciones" class="col-md-12 t" enctype="multipart/form-data")
+    div(class="col-md-6 text-center center-block")
+      h1 Publica, comunicate y vende!
+      a(href="/mias") ver publicaciones
+      br
+      div(class="form-group")
+        input(type="text" size="40" name="nombrePub" placeholder="Escribe un Nombre a la  Publicacion" class="form'control")
+        p Ejemplo: Vendo Casa en Z10, Alquilo Apartamento en Izabal
+      div(class="form-group")
+        textarea(type="text" rows="3" cols="40" name="descripcionPub" placeholder="Escribe una descripcion de la  Publicacion" class="form'control")
+      div(class="form-group")
+        label Presiona para subir imagenes
+        input(type="file" name="image_avatar" class="center-block")     
+        input(type="file" name="image_avatar1" class="center-block")
+        input(type="file" name="image_avatar2" class="center-block")
+        input(type="file" name="image_avatar3" class="center-block")
+        input(type="file" name="image_avatar4" class="center-block")
+      div(class="form-group")
+        input(list="dep" name="departamentoPub" size="40" placeholder="Selecciona El Departamento")
+        datalist(id="dep")
+          option(value="Alta Verapaz")
+          option(alue="Baja Verapaz")
+          option(value="Chimaltenango")
+          option(value="Chiquimula")
+          option(value="Petén")
+          option(value="El Progreso")
+          option(value="Quiché")
+          option(value="Escuintla")
+          option(value="Guatemala")
+          option(value="Huehuetenango")
+          option(value="Izabal")
+          option(value="Jalapa")
+          option(value="Jutiapa")
+          option(value="Quetzaltenango")
+          option(value="Retalhuleu")
+          option(value="Sacatepéquez")
+          option(value="San Marcos")
+          option(value="Santa Rosa")
+          option(value="Sololá")
+          option(value="Suchitepéquez")
+          option(value="Totonicapán")
+          option(value="Zacapa")
+      
+      div(class="form-group")
+        input(type="text" size="40" name="municipioPub" placeholder="Escribe un Nombre del Municipio de Ubicacion" class="form'control")
+      div(class="form-group")
+        input(id="pac-input" size="40"  name="mapajs" class="" type="text" placeholder="Escribe la direccion")
+      div(class="form-group")
+        input(type="Number" style="width:316px" name="precio" placeholder="Escribe El Precio del Inmueble" class="form'control")
+      div(class="form-group")
+        input(list="contexto" name="contextoPrecio" size="40" placeholder="Selecciona El tipo de precio")
+        datalist(id="contexto")
+          option(value="Precio Fijo")
+          option(value="Precio Negociable")
+      div(class="form-group")
+        input(list="financiamiento" name="financiamientoPub" size="40" placeholder="Forma de Pago")
+        datalist(id="financiamiento")
+          option(value="Financiamiento")
+          option(value="Contado")
+          option(value="Financiamiento o Contado")
+      div(class="form-group")
+        input(list="alquiler" name="alquilerCompra" size="40" placeholder="Selecciona El tipo de venta")
+        datalist(id="alquiler")
+          option(value="Alquiler")
+          option(value="Compra")
+          option(value="Alquiler o Compra")
+      div(class="form-group")
+        input(type="date" style="width:316px" name="fechaPub" class="form'control")
+
+    div(class="form-group col-md-6")
+      br
+      br
+      div(id="type-selector" class="controls")
+        input(type="radio" name="type" id="changetype-all" checked="checked")
+        label(for="changetype-all") All
+        input(type="radio" name="type" id="changetype-establishment")
+        label(for="changetype-establishment") Establishments
+        input(type="radio" name="type" id="changetype-address")
+        label(for="changetype-address") Addresses
+        input(type="radio" name="type" id="changetype-geocode")
+        label(for="changetype-geocode") Geocodes
+      div(id="map")
+    div(class="form-group")
+      input(type="submit" size="20" class="btn btn-info" value="Publicar")
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhMAihqLEU_XrjM7OLNPq0e6JEYkqveFI&signed_in=true&libraries=places&callback=initMap"
+        )

@@ -1,0 +1,95 @@
+doctype html
+html
+	head
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+		meta(charset="utf-8")
+	title °ViviGuate° 
+	body
+
+		div(class="col-md-12 text-right separar fondo-nav")
+			nav(class="large-padding")
+				ul(class="no-list")
+					li(class="pacifico col-md-2 inline-block")
+						a(href="/" class="tamano-mediano") ViviGuate #[small(class="lato tamano-small") Inicia tu Futuro Hoy]
+					li(class="col-md-2 inline-block")
+						a(href="info/somos") ¿Quienes Somos?
+					li(class="col-md-2 inline-block")
+						a(href="") ¿Como Usar ViviGuate?
+
+					form(method="POST" action="/sesion" class="col-md-6")
+						div(class="form-group inline-block")
+							input(type="email" name="email" placeholder="Ingresa tu Email" class="form'control" utocomplete="off")
+						div(class="form-group inline-block")
+							input(type="password" name="pass" placeholder="Ingresa Contrasena" class="form'control espacio-izquierda" utocomplete="off")
+						div(class="form-group inline-block")
+							input(type="submit" class="btn btn-info espacio-izquierda" value="Ingresar")
+						a(href="/registro/index" class="espacio-izquierda") ¿Aun No tiene Cuenta?
+						br
+						a(href="/registro/recuperar" class="espacio-izquierda") ¿olvidaste tu contraseña?
+		a(href="/mias" class="espacio-izquierda") ver publicaciones
+		a(href="/Publica" class="espacio-izquierda") Publicar
+		a(href="/salir" class="espacio-izquierda") Salir
+		a(href="/reportar" class="espacio-izquierda ir-derecha") Reportar Problema		
+		form(method="POST" action="/buscar")
+			div(class="col-md-12 center-block t text-center espacio-arriba")
+				h1(class="titulos") ViviGuate
+				h3(class="subtitulos") Conoce Tu Nuevo Hogar Hoy
+				input(list="dep" name="departamentoPub"  placeholder="Selecciona Departamento")
+				datalist(id="dep")
+					option(value="Alta Verapaz")
+					option(alue="Baja Verapaz")
+					option(value="Chimaltenango")
+					option(value="Chiquimula")
+					option(value="Petén")
+					option(value="El Progreso")
+					option(value="Quiché")
+					option(value="Escuintla")
+					option(value="Guatemala")
+					option(value="Huehuetenango")
+					option(value="Izabal")
+					option(value="Jalapa")
+					option(value="Jutiapa")
+					option(value="Quetzaltenango")
+					option(value="Retalhuleu")
+					option(value="Sacatepéquez")
+					option(value="San Marcos")
+					option(value="Santa Rosa")
+					option(value="Sololá")
+					option(value="Suchitepéquez")
+					option(value="Totonicapán")
+					option(value="Zacapa")
+					option(value="Todo el Pais")
+				input(list="interes" name="alquilerCompra" placeholder="¿Que deseas?" class="espacio-izquierda")
+				datalist(id="interes")
+					option(value="Compra")
+					option(value="Alquiler")
+					option(value="Alquiler o Compra")
+				input(list="financiamiento" name="contextoPrecio" placeholder="Tipo de Precio" class="espacio-izquierda")
+				datalist(id="financiamiento")
+					option(value="Precio Fijo")
+					option(value="Precio Negociable")
+				input(type="Submit" name="Buscar" value="Buscar" class="btn btn-info espacio-izquierda")
+
+	div(class="row")
+		div(class="content_img")
+
+	div(class="row")
+		div(class="")
+			h2 
+			article
+			- if (productos)
+				- each producto in productos
+					div(class="col-md-4 fondo-azul inline-block content_img" style="background-image: url(#{producto.Fotografias});  background-size: 50px 50px; background-size: 100% 100%; ")  
+						a(href="/producto/" + producto._id.toString()) #{producto.nombrePub}
+						ul(class="")
+							li #{producto.descripcionPub}
+							li #{producto.departamentoPub}
+							li #{producto.municipioPub}
+							li #{producto.direccionPub}
+							li #{producto.precio}
+							li #{producto.contextoPrecio}
+							li #{producto.financiamientoPub}
+							li #{producto.alquilerCompra}
+							footer #{producto.fechaPub}
+						img(src="") 

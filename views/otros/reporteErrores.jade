@@ -1,0 +1,15 @@
+extends ../layout
+block content
+  form(method="POST" action="/btnreportar" class="col-md-12 center-block t text-center")
+    h2 Reporte de Problemas ViviGuate 
+      br 
+    div(class="form-group")
+      input(list="interes" name="tituloProblema" size="40" placeholder="Selecciona el tipo de error encontrado" class="espacio-izquierda")
+      datalist(id="interes")
+        option(value="problemas de inicio de sesión")
+        option(value="problemas de interfaz")
+        option(value="problemas al publicar")
+    div(class="form-group")
+      textarea(type="text" rows="3" cols="40" name="problema" placeholder="Escribe una descripcion del error" class="form'control")
+      br
+      input(type="submit" size="20" class="btn btn-info" value="Reportar")

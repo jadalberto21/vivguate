@@ -1,0 +1,16 @@
+extends ../layout
+block content
+  form(method="POST" action="/sesion" class="col-md-12 center-block t text-center espacio-arriba")
+    div
+    h1 Inicia Tu Futuro, HOY!
+    br
+    br
+    div(class="row")
+    div(class="col-md-12")
+      div(class="form-group")
+        input(type="email" size="40" name="email" placeholder="Ingresa tu Email" class="form´control")
+      div(class="form-group")
+        input(type="password" size="40" name="pass" placeholder="Ingresa Contrasena" class="form´control")
+      div(class="form-group text-right col-md-8")
+        a(href="/auth/facebook/") Ingresa con Facebook
+        input(type="submit" size="20" class="btn btn-info" value="registrarse")

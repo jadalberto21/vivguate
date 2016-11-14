@@ -1,0 +1,10 @@
+extends ../layout
+block content
+  form(method="POST" action="/eliminar/#{publicado.id}?_method=delete" class="col-md-12 center-block t text-center")
+    h3 Verifica tu contraseña para eliminar este Producto -
+      br 
+      b #{publicado.nombrePub}
+    div(class="form-group")
+      input(type="password" size="40" name="pass" placeholder="Escribe tu contraseña de acceso")
+    div(class="form-group")
+      input(type="submit" size="20" class="btn btn-info" value="Eliminar")

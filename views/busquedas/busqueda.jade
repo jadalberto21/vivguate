@@ -1,0 +1,16 @@
+extends ../layout
+block content
+  div(class="row")
+    div
+      h2(class="text-center") Productos
+      if (productos == "")
+        h3(class="text-center") No Hay Productos con esa informacion, Prueba Otras Opciones.
+      else
+        each producto in productos
+          div(class="contenedor-img ejemplo-3 col-md-3 fondo-azul inline-block")
+            img(src="#{producto.Fotografias}")
+            div(class="mascara")
+              h2 #{producto.nombrePub} 
+              p #{producto.descripcionPub}
+              a(href="producto/#{producto._id.toString()}" class="link") Ver mas        
+  h4(class="text-center")  _---Fin de La Busqueda---_

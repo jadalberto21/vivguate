@@ -1,0 +1,8 @@
+extends ../layout
+block content
+  form(method="POST" action="/recuperar" class="col-md-12 center-block t text-center")
+    h1 Recuperación de Contraseña
+    div(class="form-group")
+      input(type="email" size="40" name="email" placeholder="Escribe tu direccion de Correo Electronico")
+    div(class="form-group")
+      input(type="submit" size="20" class="btn btn-info" value="Recuperar")

@@ -1,0 +1,22 @@
+extends ../layout
+block content
+  form(method="POST" action="/registro" class="col-md-12 center-block t text-center espacio-arriba")
+    h1 Regitrate Para Iniciar Tu Futuro, HOY!
+    br
+    br
+    div(class="form-group")
+      input(type="text" size="40" name="nombres" placeholder="Ingresa tus Nombres" required)
+    div(class="form-group")
+      input(type="text" size="40" name="apellidos" placeholder="Ingresa tus apellidos" )
+    div(class="form-group")
+      input(type="email" size="40" name="email" placeholder="Ingresa tu Email" required)
+    div(class="form-group")
+      input(type="password" size="40" name="pass" placeholder="Ingresa Contrasena" required)
+      h6 Tu contraseña debe poseer al menos 8 caracteres
+    div(class="form-group")
+      input(type="password" size="40" name="password_confirmation" placeholder="Repite Nuevamente la Contrasena" required)
+    div(class="form-group")
+      input(type="text" size="40" name="telefono" placeholder="Ingresa numero de Contacto" )
+    div(class="form-group text-right col-md-8")
+      input(type="submit" size="20" class="btn btn-info" value="registrarse")
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js")

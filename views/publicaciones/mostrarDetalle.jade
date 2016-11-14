@@ -1,0 +1,51 @@
+extends ../layout
+block content
+  div(class="row")
+    h2(class="text-center") Productos
+    div(class="col-md-4")
+      if (publicado == "")
+        h3(class="text-center") No Hay Productos con esa informacion, Prueba Otras Opciones.
+      else
+        div(class="")
+          header
+            h3 #{publicado.nombrePub}
+            ul(class="")
+              li Descripcion: #{publicado.descripcionPub}
+              li Departamento de Ubicacion: #{publicado.departamentoPub}
+              li Municipio: #{publicado.municipioPub}
+              li Direccion Exacta: #{publicado.direccionPub}
+              li Precio: #{publicado.precio}
+              li Contexto de Precio #{publicado.contextoPrecio}
+              li Forma de Pago: #{publicado.financiamientoPub}
+              li Disponibilidad de Inmueble: #{publicado.alquilerCompra}
+              footer Fecha de Publicacion: #{publicado.fechaPub}
+              div()
+                ul 
+                  li
+                    h5
+                      b Informacion de Vendedor
+                  li Publicado por: #{publicado.sIduser.nombres}
+                  li Telefono: #{publicado.sIduser.telefono}
+                  li Email: #{publicado.sIduser.email}
+    div(class="col-md-4")
+      img(src="#{publicado.Fotografias}" class="col-md-6")
+      img(src="#{publicado.Fotografias1}" class="col-md-6")
+      img(src="#{publicado.Fotografias2}" class="col-md-6")
+      img(src="#{publicado.Fotografias3}" class="col-md-6")
+      img(src="#{publicado.Fotografias4}" class="col-md-6")
+    div(class="col-md-4")
+      div(class="form-group")
+            input(id="pac-input" value="#{publicado.direccionPub}" class="controls" type="text" placeholder="Enter a location")
+            div(id="type-selector" class="controls")
+              input(type="radio" name="type" id="changetype-all" checked="checked")
+              label(for="changetype-all") All
+              input(type="radio" name="type" id="changetype-establishment")
+              label(for="changetype-establishment") Establishments
+              input(type="radio" name="type" id="changetype-address")
+              label(for="changetype-address") Addresses
+              input(type="radio" name="type" id="changetype-geocode")
+              label(for="changetype-geocode") Geocodes
+            div(id="map")
+  h4(class="text-center")  _---Fin de La Busqueda---_
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhMAihqLEU_XrjM7OLNPq0e6JEYkqveFI&signed_in=true&libraries=places&callback=initMap2"
+        async defer)

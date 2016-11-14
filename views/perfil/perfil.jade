@@ -1,0 +1,9 @@
+extends ../layout
+block content
+  h1 Tus Publicaciones
+  p Ultimas ventas publicadas
+  each productos in productos
+    div(class="col-md-4 inline-block")
+      h3(class="subtitulos") = productos.nombrePub
+      h3(class="subtitulos") = productos.descripcionPub
+      h3(class="subtitulos") = productos.departamentoPub

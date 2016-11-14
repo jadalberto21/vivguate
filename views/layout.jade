@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css")
+    script(type="text/javascript" src="/javascripts/mapas.js")
+    meta(charset="utf-8")
+    title °ViviGuate° 
+  body
+    br
+    #header
+      ul.nav
+        li
+          a(href='/' ) ViviGuate #[small(class="lato tamano-small") Inicia tu Futuro Hoy]
+        li
+          a(href='info/somos' class="text-center") ¿Quienes Somos?     
+        li
+          a(href='' class="text-center") Como Usar ViviGuate     
+        li
+          a(href='/reportar' class="text-center") Reportar Problema 
+    block content
